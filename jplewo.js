@@ -1,24 +1,23 @@
-// to Hide Logo
 (() => {
-  function hideLogo() {
-    const hideLogoStyles = `
-      div:has(> div > img[src="/logo.png"]) {
+  function hideTeamsButton() {
+    const hideButtonStyles = `
+      button[data-element-id="workspace-tab-teams"] {
         display: none !important;
       }
     `;
 
     const styleElement = document.createElement('style');
-    styleElement.textContent = hideLogoStyles;
+    styleElement.textContent = hideButtonStyles;
     document.head.appendChild(styleElement);
 
-    console.log('logo hiding ext loaded successfully.');
+    console.log('Teams button hidden successfully');
   }
 
   // Check if the document is already loaded
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    hideLogo();
+    hideTeamsButton();
   } else {
     // If not, wait for it to load
-    document.addEventListener('DOMContentLoaded', hideLogo);
+    document.addEventListener('DOMContentLoaded', hideTeamsButton);
   }
 })();
