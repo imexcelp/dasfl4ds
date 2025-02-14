@@ -1,5 +1,5 @@
-//hide both the Teams button and the User Profile button:
 
+//hide both the Teams button and the User Profile button
 
 (() => {
   function hideButtons() {
